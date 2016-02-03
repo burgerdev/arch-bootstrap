@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -v
 
 echo $A_HOSTNAME >/etc/hostname
 ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime

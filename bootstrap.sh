@@ -3,12 +3,15 @@
 # exit on first error (beware of the gotchas!)
 set -e
 
+# echo commands
+set -v
+
 . config.sh
 
 loadkeys $A_KEYBOARD_LAYOUT
 
 parted -s $A_DISK_DEVICE mklabel msdos
-parted -s $A_DISK_DEVICE mkpart primary 1MiB $A_SDA_SIZE
+parted -s $A_DISK_DEVICE mkpart primary 1MiB $A_DISK_SIZE
 
 mkfs.ext4 ${A_DISK_DEVICE}1
 
