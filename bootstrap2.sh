@@ -20,6 +20,8 @@ systemctl enable lightdm.service
 useradd -m -p "${A_PASSWORD}" -s $A_SHELL $A_USER
 usermod -a -G $A_SUDO_GROUP $A_USER
 
+sed -i 's/^#greeter-session.*$/greeter-session=lightdm-gtk-greeter/g' /etc/lightdm/lightdm.conf
+
 echo -e "\n\n# Automatically added\n%wheel ALL=(ALL) ALL" >>/etc/sudoers
 
 mkinitcpio -p linux
