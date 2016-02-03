@@ -19,10 +19,11 @@ mount ${A_DISK_DEVICE}1 /mnt
 
 pacstrap /mnt base
 
-mkdir /mnt/etc/arch-bootstrap
-cp *.sh *.conf /mnt/etc/arch-bootstrap
+A_SPECIAL_DIR=/etc/arch-bootstrap
+mkdir /mnt/$A_SPECIAL_DIR
+cp *.sh *.conf /mnt/$A_SPECIAL_DIR
 
 genfstab -p /mnt >> /mnt/etc/fstab
 
-echo "run 'arch-chroot /mnt' and continue with part 2 from /tmp/arch-bootstrap"
+echo "run 'arch-chroot /mnt' and continue with part 2 from $A_SPECIAL_DIR"
 
