@@ -29,6 +29,7 @@ mkinitcpio -p linux
 grub-install --recheck --target=i386-pc $A_DISK_DEVICE
 grub-mkconfig -o /boot/grub/grub.cfg
 
+cp /etc/arch-bootstrap/*.conf /etc/xorg.conf.d/
 rm -rf /etc/arch-bootstrap
 
 echo "Change root password if needed, then exit chroot and reboot"

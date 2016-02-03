@@ -20,7 +20,7 @@ mount ${A_DISK_DEVICE}1 /mnt
 pacstrap /mnt base
 
 mkdir /mnt/etc/arch-bootstrap
-cp *.sh /mnt/etc/arch-bootstrap
+cp *.sh *.conf /mnt/etc/arch-bootstrap
 
 genfstab -p /mnt >> /mnt/etc/fstab
 
