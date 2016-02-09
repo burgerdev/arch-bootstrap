@@ -19,7 +19,6 @@ mount ${A_DISK_DEVICE}1 /mnt
 
 pacstrap /mnt base
 
-A_SPECIAL_DIR=/etc/arch-bootstrap
 mkdir /mnt/$A_SPECIAL_DIR
 cp *.sh *.conf /mnt/$A_SPECIAL_DIR
 

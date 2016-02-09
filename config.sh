@@ -11,7 +11,10 @@ A_PASSWORD=changeme
 A_SHELL=/usr/bin/fish
 A_LOCALE="en_US.UTF-8 UTF-8"
 
+A_SPECIAL_DIR=/etc/arch-bootstrap
+
 A_PACKAGE_LIST="python python2 git gcc sudo grub openssh xorg-server"
+A_PACKAGE_LIST="$A_PACKAGE_LIST wget firefox"
 A_PACKAGE_LIST="$A_PACKAGE_LIST vim fish thefuck bash-completion"
 A_PACKAGE_LIST="$A_PACKAGE_LIST xmonad xmonad-contrib xmobar dmenu lilyterm"
 A_PACKAGE_LIST="$A_PACKAGE_LIST lightdm lightdm-gtk-greeter"

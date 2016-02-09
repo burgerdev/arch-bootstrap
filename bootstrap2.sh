@@ -29,8 +29,8 @@ mkinitcpio -p linux
 grub-install --recheck --target=i386-pc $A_DISK_DEVICE
 grub-mkconfig -o /boot/grub/grub.cfg
 
-cp /etc/arch-bootstrap/*.conf /etc/xorg.conf.d/
-rm -rf /etc/arch-bootstrap
+cp $A_SPECIAL_DIR/*.conf /etc/X11/xorg.conf.d/
 
 echo "Change root password if needed, then exit chroot and reboot"
+echo "Also, don't forget to remove $A_SPECIAL_DIR if you don't need it anymore"
 
