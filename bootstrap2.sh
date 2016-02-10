@@ -14,6 +14,9 @@ echo "LANG=$A_LANG" >/etc/locale.conf
 echo "KEYMAP=$A_KEYBOARD_LAYOUT" >/etc/vconsole.conf
 
 pacman -Syyu --noconfirm
+
+. packages.sh
+
 pacman -S --noconfirm $A_PACKAGE_LIST 
 
 systemctl enable lightdm.service
